@@ -1,6 +1,6 @@
 # Terms
 
-This is the list of the common domain models found in react-arborist.
+This is the list of the common domain models found in react-arborist-simple.
 
 * **Tree View**: The main component that renders the UI.
 * **Source Data**: Any data you bring from the outside world.
@@ -13,7 +13,7 @@ This is the list of the common domain models found in react-arborist.
 
 ## Details
 
-When you reach for react-arborist you usually will bring with you some _source data_ that you with to render with the _TreeView_ component.
+When you reach for react-arborist-simple you usually will bring with you some _source data_ that you with to render with the _TreeView_ component.
 
 The _TreeView_ component receives many props, one of which is called "nodes". The "nodes" prop is a _partial controller_ object with `value` and `onChange` properties. The nodes partial controller value must be an array of _node objects_.
 
@@ -33,7 +33,7 @@ type NodeObject<T> = {
 ```
 
 
-You can convert the _source data_ into _node objects_ yourself, or you can use a helper function provided by react-arborist called `createTreeManager(sourceData, options)`. It will return a _TreeManager_ instance. The _tree manager_ will have a property called "nodes" which will return an array of objects that conform to the _node object_ interface. However, they will be instances of the _SourceDataProxy_ class. These objects have all the properties required of _node objects_ along with methods to mutate the _source data_ it contains. The _TreeManager_ also has methods for mutating the _source data_ in response to change events.
+You can convert the _source data_ into _node objects_ yourself, or you can use a helper function provided by react-arborist-simple called `createTreeManager(sourceData, options)`. It will return a _TreeManager_ instance. The _tree manager_ will have a property called "nodes" which will return an array of objects that conform to the _node object_ interface. However, they will be instances of the _SourceDataProxy_ class. These objects have all the properties required of _node objects_ along with methods to mutate the _source data_ it contains. The _TreeManager_ also has methods for mutating the _source data_ in response to change events.
 
 ### Internals
 
